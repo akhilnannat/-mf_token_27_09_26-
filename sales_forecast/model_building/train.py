@@ -95,7 +95,23 @@ with mlflow.start_run():
 
     # Save next to app.py so the Streamlit app can load it directly, and log
     # it as an MLflow artifact for traceability
-    model_path = "sales_forecast/deployment/best_sales_revenue_model_v1.joblib"
+    #model_path = "sales_forecast/deployment/best_sales_revenue_model_v1.joblib"
+    #joblib.dump(best_model, model_path)
+    #mlflow.log_artifact(model_path, artifact_path="model")
+   # print(f"Model saved to {model_path}")
+
+      # Save the trained model in the deployment folder
+    from pathlib import Path
+
+    project_root = Path(__file__).resolve().parents[1]
+    deployment_dir = project_root / "deployment"
+    deployment_dir.mkdir(parents=True, exist_ok=True)
+
+    model_path = deployment_dir / "best_sales_revenue_model_v1.joblib"
+
     joblib.dump(best_model, model_path)
-    mlflow.log_artifact(model_path, artifact_path="model")
-    print(f"Model saved to {model_path}")
+
+    # Log the model file as an MLflow artifact
+    mlflow.log_artifact(str(model_path), artifact_path="model")
+
+    print(f"Model saved successfully to: {model_path}")
