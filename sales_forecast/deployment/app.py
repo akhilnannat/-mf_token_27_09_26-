@@ -18,7 +18,7 @@ Please enter the app details below to get a Sales prediction.
 # User input
 Product_Sugar_Content= st.selectbox("Product_Sugar_Content",["Low Sugar","Regular","No Sugar","reg"])
 Product_Type =st.selectbox("Product_Type",['Frozen Foods','Dairy','Canned','Baking Goods','Health and Hygiene','Snack Foods','Meat','Fruits and Vegetables','Breads','Starchy Foods'])
-Store_Size = st.selectbox("Store_Size",['High','Medium','Small']
+Store_Size = st.selectbox("Store_Size",['High','Medium','Small'])
 Store_Location_City_Type = st.selectbox("Store_Location_City_Type",['Tier 1','Tier 2','Tier 3'])    
 Store_Type= st.selectbox("Store_Type",['Supermarket Type1','Supermarket Type2','Departmental Store','Food Mart'])                     
 Store_Id = st.selectbox("Store_ID",['OUT001','OUT002','OUT003','OUT004'])
