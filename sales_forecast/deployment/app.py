@@ -26,7 +26,7 @@ Store_Id = st.selectbox("Store_Id",['OUT001','OUT002','OUT003','OUT004'])
 Product_Weight= st.number_input("Product_Weight",min_value=1.0, max_value=1000.0, value=50.0, step=0.1)
 Product_Allocated_Area=st.number_input("Product_Allocated_Area(Ratio)",min_value=1.0, max_value=1000.0, value=50.0, step=0.1)
 Product_MRP=st.number_input("Product_MRP",min_value=1.0, max_value=100000.0, value=50.0, step=0.1)
-Store_Establishment_Year= st.number_input("Store_Establishment_Year",min_value=1.0, max_value=10000.0, value=50.0, step=1)
+Store_Establishment_Year= st.number_input("Store_Establishment_Year",min_value=1.0, max_value=10000, value=2000, step=1)
 
 
 # Assemble input into DataFrame
