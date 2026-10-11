@@ -21,7 +21,7 @@ Product_Type =st.selectbox("Product_Type",['Frozen Foods','Dairy','Canned','Baki
 Store_Size = st.selectbox("Store_Size",['High','Medium','Small'])
 Store_Location_City_Type = st.selectbox("Store_Location_City_Type",['Tier 1','Tier 2','Tier 3'])    
 Store_Type= st.selectbox("Store_Type",['Supermarket Type1','Supermarket Type2','Departmental Store','Food Mart'])                     
-Store_Id = st.selectbox("Store_ID",['OUT001','OUT002','OUT003','OUT004'])
+Store_Id = st.selectbox("Store_Id",['OUT001','OUT002','OUT003','OUT004'])
                           
 Product_Weight= st.number_input("Product_Weight",min_value=1.0, max_value=1000.0, value=50.0, step=0.1)
 Product_Allocated_Area=st.number_input("Product_Allocated_Area(Ratio)",min_value=1.0, max_value=1000.0, value=50.0, step=0.1)
@@ -36,7 +36,7 @@ input_data = pd.DataFrame([{
     'Store_Size': Store_Size,
     'Store_Location_City_Type': Store_Location_City_Type,
     'Store_Type': Store_Type,
-    'Store_ID': Store_ID,
+    'Store_Id': Store_Id,
     'Product_Weight': Product_Weight,
     'Product_Allocated_Area': Product_Allocated_Area,
     'Product_MRP': Product_MRP,
